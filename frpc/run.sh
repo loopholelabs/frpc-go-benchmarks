@@ -5,7 +5,7 @@ ulimit -n 16384
 echo "Running Server, binding to $1"
 go run server/main.go "$1" &
 SERVER_PID=$!
-echo "Server started with PID $SERVER_PID"
+echo "Server started with PID ${SERVER_PID}"
 
 sleep 1
 
@@ -40,5 +40,5 @@ go run client/main.go "$1" 1048576 10 10 5 1
 go run client/main.go "$1" 1048576 10 10 10 1
 go run client/main.go "$1" 1048576 10 10 100 1
 
-kill -9 $SERVER_PID
+kill -9 "${SERVER_PID}"
 pkill main

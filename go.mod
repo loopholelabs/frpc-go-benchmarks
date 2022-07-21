@@ -7,8 +7,8 @@ require (
 	github.com/loopholelabs/polyglot-go v0.3.0
 	github.com/loov/hrtime v1.0.3
 	github.com/rs/zerolog v1.27.0
-	go.buf.build/grpc/go/loopholelabs/frisbee-benchmark v1.3.1
 	google.golang.org/grpc v1.48.0
+	google.golang.org/protobuf v1.28.0
 )
 
 require (
@@ -22,5 +22,4 @@ require (
 	golang.org/x/sys v0.0.0-20210927094055-39ccf1dd6fa6 // indirect
 	golang.org/x/text v0.3.3 // indirect
 	google.golang.org/genproto v0.0.0-20200526211855-cb27e3aa2013 // indirect
-	google.golang.org/protobuf v1.28.0 // indirect
 )

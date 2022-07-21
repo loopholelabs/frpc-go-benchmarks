@@ -1,0 +1,12 @@
+version: 0.1
+cli:
+  version: 0.15.0-beta
+lint:
+  enabled:
+    - git-diff-check@SYSTEM
+    - gitleaks@8.8.12
+    - gofmt@1.16.7
+    - golangci-lint@1.46.2
+    - prettier@2.7.1
+    - shellcheck@0.8.0
+    - shfmt@3.5.0
