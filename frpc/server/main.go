@@ -22,7 +22,7 @@ func main() {
 	shouldLog := len(os.Args) > 2
 	var logger *zerolog.Logger
 	if shouldLog {
-		l := zerolog.New(os.Stdout)
+		l := zerolog.New(os.Stdout).Level(zerolog.InfoLevel)
 		logger = &l
 	}
 	frisbeeServer, err := benchmark.NewServer(new(svc), nil, logger)

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+ulimit -n 16384
+
 echo "Running Server, binding to $1"
 go run server/main.go "$1" &
 SERVER_PID=$!
