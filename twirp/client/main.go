@@ -110,7 +110,7 @@ func main() {
 
 	for i := 0; i < numClients; i++ {
 		c := new(http.Client)
-		clients = append(clients, &client{Client: c, BenchmarkService: benchmark.NewBenchmarkServiceProtobufClient(os.Args[1], c)})
+		clients = append(clients, &client{Client: c, BenchmarkService: benchmark.NewBenchmarkServiceProtobufClient(fmt.Sprintf("http://%s", os.Args[1]), c)})
 	}
 
 	var wg sync.WaitGroup
