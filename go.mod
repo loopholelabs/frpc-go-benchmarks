@@ -7,6 +7,7 @@ require (
 	github.com/loopholelabs/polyglot-go v0.3.0
 	github.com/loov/hrtime v1.0.3
 	github.com/rs/zerolog v1.27.0
+	github.com/twitchtv/twirp v8.1.2+incompatible
 	google.golang.org/grpc v1.48.0
 	google.golang.org/protobuf v1.28.0
 )
