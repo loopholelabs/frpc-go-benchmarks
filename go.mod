@@ -3,7 +3,7 @@ module github.com/loopholelabs/frpc-go-benchmarks
 go 1.18
 
 require (
-	github.com/loopholelabs/frisbee-go v0.5.1
+	github.com/loopholelabs/frisbee-go v0.2.1-0.20220806213043-7b1f8135d527
 	github.com/loopholelabs/polyglot-go v0.3.0
 	github.com/loov/hrtime v1.0.3
 	github.com/rs/zerolog v1.27.0
@@ -14,7 +14,7 @@ require (
 
 require (
 	github.com/golang/protobuf v1.5.2 // indirect
-	github.com/loopholelabs/common v0.2.0 // indirect
+	github.com/loopholelabs/common v0.4.4 // indirect
 	github.com/mattn/go-colorable v0.1.12 // indirect
 	github.com/mattn/go-isatty v0.0.14 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
