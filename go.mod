@@ -3,7 +3,7 @@ module github.com/loopholelabs/frpc-go-benchmarks
 go 1.18
 
 require (
-	github.com/loopholelabs/frisbee-go v0.2.1-0.20220806213043-7b1f8135d527
+	github.com/loopholelabs/frisbee-go v0.6.0
 	github.com/loopholelabs/polyglot-go v0.3.0
 	github.com/loov/hrtime v1.0.3
 	github.com/rs/zerolog v1.27.0

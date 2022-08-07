@@ -45,8 +45,6 @@ func main() {
 		panic(err)
 	}
 
-	frpcServer.SetConcurrency(0)
-
 	if shouldLog {
 		go func() {
 			err = frpcServer.Start(os.Args[1])
