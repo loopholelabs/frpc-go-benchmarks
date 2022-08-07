@@ -40,14 +40,14 @@ func main() {
 		l := zerolog.New(os.Stdout).Level(zerolog.InfoLevel)
 		logger = &l
 	}
-	frisbeeServer, err := benchmark.NewServer(new(svc), nil, logger)
+	frpcServer, err := benchmark.NewServer(new(svc), nil, logger)
 	if err != nil {
 		panic(err)
 	}
 
 	if shouldLog {
 		go func() {
-			err = frisbeeServer.Start(os.Args[1])
+			err = frpcServer.Start(os.Args[1])
 			if err != nil {
 				panic(err)
 			}
@@ -58,7 +58,7 @@ func main() {
 			time.Sleep(time.Millisecond * 500)
 		}
 	} else {
-		err = frisbeeServer.Start(os.Args[1])
+		err = frpcServer.Start(os.Args[1])
 		if err != nil {
 			panic(err)
 		}
