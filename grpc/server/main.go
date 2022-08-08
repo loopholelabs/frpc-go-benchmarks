@@ -27,7 +27,7 @@ import (
 )
 
 const (
-	Sleep = false
+	Sleep = true
 )
 
 type svc struct {
