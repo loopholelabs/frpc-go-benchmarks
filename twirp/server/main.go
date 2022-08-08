@@ -26,9 +26,16 @@ import (
 	"time"
 )
 
+const (
+	Sleep = false
+)
+
 type svc struct{}
 
 func (s *svc) Benchmark(_ context.Context, req *benchmark.Request) (*benchmark.Response, error) {
+	if Sleep {
+		time.Sleep(time.Microsecond * 50)
+	}
 	res := new(benchmark.Response)
 	res.Message = req.Message
 	return res, nil
