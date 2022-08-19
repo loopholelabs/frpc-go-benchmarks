@@ -17,6 +17,7 @@ package main
 
 import (
 	"context"
+	"github.com/loopholelabs/frpc-go-benchmarks/config"
 	"github.com/loopholelabs/frpc-go-benchmarks/grpc/benchmark"
 	"google.golang.org/grpc"
 	"log"
@@ -26,16 +27,12 @@ import (
 	"time"
 )
 
-const (
-	Sleep = true
-)
-
 type svc struct {
 	benchmark.UnimplementedBenchmarkServiceServer
 }
 
 func (s *svc) Benchmark(_ context.Context, req *benchmark.Request) (*benchmark.Response, error) {
-	if Sleep {
+	if config.Sleep {
 		time.Sleep(time.Microsecond * 50)
 	}
 	res := new(benchmark.Response)

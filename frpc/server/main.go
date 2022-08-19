@@ -17,6 +17,7 @@ package main
 
 import (
 	"context"
+	"github.com/loopholelabs/frpc-go-benchmarks/config"
 	"github.com/loopholelabs/frpc-go-benchmarks/frpc/benchmark"
 	"github.com/rs/zerolog"
 	"log"
@@ -25,14 +26,10 @@ import (
 	"time"
 )
 
-const (
-	Sleep = true
-)
-
 type svc struct{}
 
 func (s *svc) Benchmark(_ context.Context, req *benchmark.Request) (*benchmark.Response, error) {
-	if Sleep {
+	if config.Sleep {
 		time.Sleep(time.Microsecond * 50)
 	}
 	res := new(benchmark.Response)
@@ -50,6 +47,10 @@ func main() {
 	frpcServer, err := benchmark.NewServer(new(svc), nil, logger)
 	if err != nil {
 		panic(err)
+	}
+
+	if !config.Sleep {
+		frpcServer.SetConcurrency(1)
 	}
 
 	if shouldLog {
