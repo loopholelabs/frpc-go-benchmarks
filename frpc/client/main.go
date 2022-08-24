@@ -37,7 +37,7 @@ func (c *client) run(wg *sync.WaitGroup, size int, req *benchmark.Request) {
 	var res *benchmark.Response
 	var err error
 	for q := 0; q < size; q++ {
-		res, err = c.Benchmark(context.Background(), req)
+		res, err = c.BenchmarkService.Benchmark(context.Background(), req)
 		if err != nil {
 			panic(err)
 		}
